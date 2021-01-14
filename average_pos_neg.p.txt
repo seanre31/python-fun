@@ -1,0 +1,30 @@
+num_arr = [] 
+
+for i in range(0, 10):
+	number = int(input('Please enter a number: ')) 
+	num_arr.append(number) 
+sum_p = list(filter(lambda x: x >0, num_arr))
+sum_n = list(filter(lambda x: x <0, num_arr))
+
+add_p = sum(sum_p)
+add_n = sum(sum_n)
+
+pos_p = len(sum_p)
+avg_p = add_p / pos_p
+
+neg_n = len(sum_n)
+avg_n = add_n / neg_n
+
+print("Positive numbers: ")
+print( ','.join(map(str, sum_p)))
+print("Total positive numbers: ")
+print(add_p)
+print("Average positive numbers: ")
+print(avg_p)
+
+print("Negative numbers: ")
+print(','.join(map(str, sum_n)))
+print("Total negative numbers: ")
+print(add_n)
+print("Average negative numbers: ")
+print(avg_n)
